@@ -1,0 +1,19 @@
+[
+    {
+        "Title" : "Tiger",
+        "Description" : "Tiger is a largest animal of cat species having unique pattern of dark vertical stripes on its reddish-orange fur",
+        "Content" : "The zoological name of tiger (national animal) is Panthera tigris. It is a carnivorous animal which comes under the category of mammal as it gives birth to a child. It belongs to the cat family as a largest living member. It is found all around Asia especially in the countries like Bhutan, China, India, and Siberia. Bengal tigers are generally found in Sundarbans (watery jungle) located in Bangladesh and West Bengal including other south-east Asian countries. They are found in various colors especially white, blue and orange with black stripes. Black stripes on their upper body help them to hide away while hunting. Each and every tiger has different pattern of stripes on their body."
+    },
+
+    {
+        "Title" : "Elephant",
+        "Description" : "Elephant is the largest land animal on eath",
+        "Content" : "Elephants are herbivorous and feed on leaves, plants, grains, fruits and more. They are mostly found in Africa and Asia. Most of the elephants are grey in color, however, in Thailand, they have white elephants.In addition, elephants are one of the longest-lived animals with an average lifespan of around 5-70 years. But, the oldest elephant to ever live passed away at the age of 86 years.Furthermore, they mostly inhabit jungles but humans have forced them to work in zoos and circuses. Elephants are considered to be one of the most intelligent animals."
+    },
+
+    {
+        "Title" : "Wolf",
+        "Description" : "Wolves are smart creatures that dwell in packs.",
+        "Content" : "A single pack may contain animals that are black, shades of gray-brown, and white. Wolves in the heavily forested areas of eastern North America are more uniform in color. They are often a grizzled gray-brown like some German shepherd dogs. This color variation is a good example of natural selection, which enables those animals best suited to a particular environment to survive. On the arctic islands, where much of the ground is snow-covered for at least nine months of the year, being white is a distinct advantage, so wolves in the Arctic may be nearly white. In the mottled grey, green, and brown world of the eastern forests the normal coat of the wolf is an effective camouflage. As a wolf moves stealthily, or rests, it blends into the background and is hardly seen. Wolves in the Arctic have extremely dense under-fur, which insulates them against rigorous winters. Another adaptation to environment is their habit of hunting in packs, or groups, which enables them to kill large animals."
+    }
+]

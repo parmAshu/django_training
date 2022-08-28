@@ -10,33 +10,34 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light p-2" style="background-color:#ee8048; color:white;">
-      <a class="navbar-brand" href="/">Simple Drive</a>
-    
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-    
-          <li class="nav-item">
-            <a class="nav-link" href="/upload">Upload</a>
-          </li>
+        <a class="navbar-brand" href="/">Simple Drive</a>
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+      
+            <li class="nav-item">
+              <a class="nav-link" href="/upload">Upload</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link" href="/delete">Delete</a>
+            </li>
+  
+          </ul>
+        </div>
+        
+      </nav>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/delete">Delete</a>
-          </li>
-
-        </ul>
-      </div>
-    </nav>
-
-    <ul class="list-group m-5">
-      {% for file in fileList %}
-      <li class="list-group-item" style="background-color : {% cycle 'rgba(0, 255, 0, 0.1)' 'rgba(0, 0, 255, 0.1)' %}; "><a href="/download?fileName={{ file }}" target="_blank">{{file}}</a></li>
-      {% endfor %}
-    </ul>
+      <ul class="list-group m-5">
+        {% for file in fileList %}
+          <li class="list-group-item" style="background-color : {% cycle 'rgba(0, 255, 0, 0.1)' 'rgba(0, 0, 255, 0.1)' %}; "><a href="/download?fileName={{ file }}" target="_blank">{{file}}</a></li>
+        {% endfor %}
+      </ul>
 
     <script src="{% static '/js/bootstrap.bundle.min.js' %}" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

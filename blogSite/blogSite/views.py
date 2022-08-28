@@ -27,4 +27,5 @@ def blogPage( request ):
         for blog in blogs:
             if blog["Title"] == blogPath:
                 context = blog
+    context["sampleList"] = [ "This", "is", "a", "list" ]
     return render( request, 'blog.html', context = context )

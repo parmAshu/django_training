@@ -12,6 +12,8 @@
         <div class="jumbotron text-center p-3" style="background-color:#266150; color:white;">
             <h1>{{ Title }}...</h1>
             <p>{{ Description }}...</p>
+            <p> Number of letters: {{ Content | length }}</p>
+            <p> Number of words: {{ Content | wordcount }}</p>
         </div>
 
         <br>

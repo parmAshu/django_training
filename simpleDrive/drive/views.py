@@ -7,6 +7,8 @@ from django import forms
 
 from pathlib import Path
 
+from . import models
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -51,15 +53,14 @@ def uploadFileHandler( request ):
             if os.path.exists( filePath ):
                 return render( request, "messageNav.html", context = { "type" : "Failure", "message" : "File already exists!" } )
 
-            with open( filePath, 'wb+' ) as fl:
-                for chunk in file.chunks():
-                    fl.write( chunk )
+            obj = models.DriveFile( fl = file, fileName = file.name )
+            obj.save()
             
             return render( request, "messageNav.html", { "type" : "success", "message" : "File saved successfully" } )
         else:
-            return render( request, "messageNav.html", { "type" : "Failure", "message" : "Invalid request!"})
+            return render( request, "messageNav.html", { "type" : "Failure", "message" : "Invalid request1!"})
     else:
-        return render( request, 'messageNav.html', { "type" : "Failure", "message" : "Invalid Request!"} )
+        return render( request, 'messageNav.html', { "type" : "Failure", "message" : "Invalid Request2!"} )
 
 def deleteFileHandler( request ):
     if request.method == "POST":
@@ -67,7 +68,12 @@ def deleteFileHandler( request ):
         if frm.is_valid() == True:
             filePath = os.path.join( BASE_DIR, "files", frm.cleaned_data["fileName"] )
             if os.path.exists( filePath ):
+                
+                obj = models.DriveFile.objects.filter( fileName__icontains = frm.cleaned_data['fileName'] )
+                if len(obj) == 1:
+                    obj[0].delete()
                 os.remove( filePath )
+                
                 return render( request, "messageNav.html", context = { "type" : "success", "message" : "File Deleted!" } )
             else:
                 return render( request, "messageNav.html", context = { "type" : "failure", "message" : "File Does not Exist!" } )
